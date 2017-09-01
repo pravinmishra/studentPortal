@@ -1,0 +1,73 @@
+<a  [routerLink]="['/app/dashboard']" class="addNew">Go to DashBoard</a>     
+<h1 class="heading">Add Student</h1>
+
+<div class="add-container">
+    <h2>Add a new student</h2>
+    <form name="form" #f="ngForm" novalidate>
+        <div class="api-success" *ngIf="addStudentSuccess">
+            <span id="apiError" class="api-success-msg">{{addStudentSuccessMsg}}</span>
+        </div>
+        <div class="api-error" *ngIf="addStudentError">
+            <span id="apiError" class="api-error-msg">{{addStudentErrorMsg}}</span>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !Name.valid }">
+            <label for="username">Full Name</label>
+            <input type="text" class="form-control" name="Name" [(ngModel)]="studentDetail.Name" #Name="ngModel" required />
+            <div *ngIf="f.submitted && !Name.valid" class="help-block">Name is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !dob.valid }">
+            <label for="dob">Date of Birth</label>
+            <input type="text" class="form-control" name="dob" [(ngModel)]="studentDetail.DOB" #dob="ngModel" required />
+            <div *ngIf="f.submitted && !dob.valid" class="help-block">Date of Birth is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !school.valid }">
+            <label for="school">School</label>
+            <select class="form-control" name="school" required #school [(ngModel)]="studentDetail.school">
+                <option value="">Select a school</option>
+                <option value="Podar School">Podar School</option>
+                <option value="Sarasvati School">Sarasvati School</option>
+                <option value="Prabhadevi School">Prabhadevi School</option>                
+            </select>
+            <div *ngIf="f.submitted && !school.valid" class="help-block">School is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !class.valid }">
+            <label for="class">Class</label>
+            <select class="form-control" name="class" required #class [(ngModel)]="studentDetail.class">
+                <option value="">Select a class</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option> 
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>                 
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>                                                                
+            </select>
+            <div *ngIf="f.submitted && !class.valid" class="help-block">Class is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !division.valid }">
+            <label for="division">Division</label>
+            <select class="form-control" name="division" required #division [(ngModel)]="studentDetail.division">
+                <option value="">Select a division</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option> 
+                <option value="D">D</option>
+            </select>
+            <div *ngIf="f.submitted && !division.valid" class="help-block">division is required</div>
+        </div>
+        <div class="form-group statusBox" [ngClass]="{ 'has-error': f.submitted && !genderControl.valid }">
+            <label for="status">Status</label>
+            <input type="radio" value="active" name="status" [(ngModel)]="studentDetail.status" required #genderControl="ngModel"> Active
+            <input type="radio" value="inactive" name="status" [(ngModel)]="studentDetail.status" required> Inactive
+            <div *ngIf="f.submitted && !genderControl.valid" class="help-block">status is required</div>
+        </div>                
+        <div class="form-group">
+            <button [disabled]="loading" class="btn btn-primary" (click)="addStudent(f)">Submit</button>
+            <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="
+            />
+        </div>
+    </form>
+</div>

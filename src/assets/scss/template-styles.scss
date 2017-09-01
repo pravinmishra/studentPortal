@@ -1,0 +1,111 @@
+section.ui {
+    margin-bottom: 130px;
+
+}
+
+section.ui h2 { 
+    margin-bottom: 5px; 
+    background-color: $gray-lighter; 
+    padding: 15px;
+    border-bottom: solid 1px $gray-light;
+    border-right: solid 2px $gray;
+    }
+
+.ui-description {
+    padding: 15px;
+    padding-left: 0;
+    font-family: Helvetica;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.ui-description-list {
+    //font-size: 12px;
+    list-style-type: number;
+    list-style-position: outside;
+    font-family: Helvetica;
+
+    li { margin-bottom: 12px;}
+}
+
+.std-box {
+    min-height: 230px;
+    padding: 20px;
+    background-color: $gray;
+    margin-bottom: 25px;
+}
+
+//### when layout is of two columns with a large gap (100px) created by way of col-md-offset-1
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+.two-col {
+    [class*=col] {
+    // border: solid 1px orange;
+
+    @media screen and (max-width: 991px) {
+    &:last-child { margin-top: 50px;} //store this value in variable and use that (create serveral values in multiple of a base value)
+}
+}
+}
+
+//## the last row / end row on the @page
+// 
+
+// copy this to custom-styles
+
+.end-row  {
+     >[class*=col] { 
+         >:last-child {
+            margin-bottom: 0;
+            @media screen and (max-width: 991px) { margin-bottom: 25px;}
+         }
+         &:last-child :last-child { margin-bottom: 0;}
+     }
+}
+
+//## three column layout
+///////////////////////////////////////
+
+.three-columns { 
+    //add styles if required
+     }
+
+// the middle column within a 3 column layout - how it behaves in responsive manner
+.middle-column {
+    @media screen and (max-width: 991px) { 
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+
+/* Radios and Checkboxes
+*/
+
+.checkbox label {
+
+    // padding-left: 40px;
+}
+
+
+.checkbox input[type=checkbox]{
+    //border: solid 1px pink;
+
+}
+
+
+// pending CSS work...
+// 1) create mixin for customizing column-gutters (padding-left, padding-right of the columns)
+
+
+
+
+/* When inline content blocks (say footer links) are to be given spacing
+between them. spacing created by margin left (exceltp the first element)
+*/
+
+.check1 {
+    border: solid 1px blue;
+    li { border: solid 1px red; display: inline-block;}
+    >li + li { margin-left: 25px;}
+}

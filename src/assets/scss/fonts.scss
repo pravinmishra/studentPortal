@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+/* embed 'Futura' font
+------------------------------------------------------------------------------------------------*/
+@font-face {
+	font-family: 'Futura';
+	src: url('../fonts/orbba/Futura-Medium.eot');
+	src: url('../fonts/orbba/Futura-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/orbba/Futura-Medium.woff2') format('woff2'),
+		url('../fonts/orbba/Futura-Medium.woff') format('woff'),
+		url('../fonts/orbba/Futura-Medium.ttf') format('truetype'),
+		url('../fonts/orbba/Futura-Medium.svg#Futura-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Futura';
+	src: url('../fonts/orbba/Futura-Bold.eot');
+	src: url('../fonts/orbba/Futura-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/orbba/Futura-Bold.woff2') format('woff2'),
+		url('../fonts/orbba/Futura-Bold.woff') format('woff'),
+		url('../fonts/orbba/Futura-Bold.ttf') format('truetype'),
+		url('../fonts/orbba/Futura-Bold.svg#Futura-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/*How to*/
+.futura { font-family: 'Futura'; margin-bottom: 100px;} /*This simply applies the 'normal / 500' weight to the text */
+.futura-normal { font-family: 'Futura'; font-weight: 500; } /*This simply applies the 'normal / 500' weight to the text */
+.futura-bold { font-family: 'Futura'; font-weight: bold; } /*This applies 'bold' weight to the text */
+
+
+/* embed 'Helvetica' font 
+------------------------------------------------------------------------------------------------*/
+
+@font-face {
+	font-family: 'Helvetica';
+	src: url('../fonts/orbba/Helvetica.eot');
+	src: url('../fonts/orbba/Helvetica.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/orbba/Helvetica.woff2') format('woff2'),
+		url('../fonts/orbba/Helvetica.woff') format('woff'),
+		url('../fonts/orbba/Helvetica.ttf') format('truetype'),
+		url('../fonts/orbba/Helvetica.svg#Helvetica') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Helvetica';
+	src: url('../fonts/orbba/Helvetica-Bold.eot');
+	src: url('../fonts/orbba/Helvetica-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/orbba/Helvetica-Bold.woff2') format('woff2'),
+		url('../fonts/orbba/Helvetica-Bold.woff') format('woff'),
+		url('../fonts/orbba/Helvetica-Bold.ttf') format('truetype'),
+		url('../fonts/orbba/Helvetica-Bold.svg#Helvetica-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/*How to*/
+.helvetica { font-family: 'Helvetica';} /*This simply applies the 'normal / 500' weight to the text */
+.helvetica-normal { font-family: 'Helvetica'; font-weight: 500; } /*This simply applies the 'normal / 500' weight to the text */
+.helvetica-bold { font-family: 'Helvetica'; font-weight: bold; } /*This applies 'bold' weight to the text */

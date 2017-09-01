@@ -1,0 +1,284 @@
+.login-container{
+    width: 400px;
+    height: 400px;
+    margin: 100px auto;
+}
+.signup-container{
+    width: 400px;
+    height: 400px;
+    margin: 100px auto;
+    
+}
+.add-container{
+    width: 400px;
+    height: 450px;
+    margin: 100px auto;    
+}
+form {
+    // border: 3px solid #f1f1f1;
+    .help-block{
+        color: red;
+    }
+    .has-error{
+        .form-control{
+            border: solid 1px red;            
+        }
+    }
+}
+input[type=text], input[type=password]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.statusBox{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+
+.api-error {
+    width: 100%;
+    min-height: 30px;
+  //   background-color: #fffbf1;
+  //   border: solid 1px #fc9300;
+    background-color: #fdf4f4;
+    border: solid 1px #be0101;
+    text-align:center;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .api-error-msg {
+    font-stretch: normal;
+    font-family: Helvetica;
+    text-align: center;
+    letter-spacing: normal;
+    font-style: normal;
+    line-height: normal;
+  //   color: #fc9300;
+    color: #be0202;
+    font-size: 12px;
+    font-weight: normal;
+  }
+  .api-error-msg{
+      a{
+        //color: #fc9300;
+          color: #be0202;
+        text-decoration: underline;  
+      }
+  }
+  .api-success {
+    width: 100%;
+    min-height: 30px;
+    background-color: #fffbf1;
+    border: solid 1px #69c2a5;
+    text-align:center;
+    padding: 10px;
+  }
+  .api-success-msg{
+    font-stretch: normal;
+    font-family: Helvetica;
+    text-align: center;
+    letter-spacing: normal;
+    font-style: normal;
+    line-height: normal;
+    color: #69c2a5;
+    font-size: 12px;
+    font-weight: normal;
+  }
+
+  .heading{
+      font-size: 16px;
+      text-align: center;
+      text-decoration: underline;
+      color: #4CAF50;
+      font: Helvetica, Verdana, sans-serif;      
+  }
+   
+  ul {
+    
+    list-style-type: none;
+    margin: 30px auto;
+    padding: 0;
+  }
+   
+  li {
+    height: 50px;  
+    font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+    border-bottom: 1px solid #ccc;
+  }
+  li div{
+      margin-top: 10px;
+  }
+  li .srno{
+      width: 5%;
+      float: left;
+  }
+  li .name{
+      width: 20%;
+      float: left;
+  }
+  li .age{
+      width: 5%;
+      float: left;
+  }
+  li .school{
+      width: 20%;
+      float: left;
+  }
+  li .standard{
+      width: 5%;
+      float: left;
+  } 
+  li .division{
+      width: 5%;
+      float: left;
+  }
+  li .status{
+      width: 10%;
+      float: left;
+  }
+  li:last-child {
+    border: none;
+  }
+  li .links{
+      width: 30%;
+      float: left;
+  }
+  .links a{
+      width: 50%;
+      float: left;
+      position: relative;
+      color: #4CAF50; 
+      text-decoration: underline;
+      cursor: pointer;     
+  }
+  li div a {
+    color: #000;
+    display: block;
+    width: 200px;
+   
+    -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+    transition: font-size 0.3s ease, background-color 0.3s ease;
+  }
+   
+//   li a:hover {
+//     font-size: 30px;
+//     background: #f6f6f6;
+//   }
+.clearfix {
+    *zoom: 1;
+  }
+  
+  .clearfix:before,
+  .clearfix:after {
+    display: table;
+    line-height: 0;
+    content: "";
+  }
+  
+  .clearfix:after {
+    clear: both;
+  }
+  
+  .pull-left{
+     float: left;
+  }
+  
+  li.clearfix:before {
+      display: inline;
+  }
+//pagination
+.pagination {
+    margin: 10px auto;
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+.addNew{
+    color: #be01ef;
+    float: left;
+}
+.logout{
+    color: #be01ef;
+    float: right;    
+}
+
+  

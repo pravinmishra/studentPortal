@@ -1,0 +1,102 @@
+
+.btn { letter-spacing: 0.8px;}
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-lg {
+  // font-size had to be modfied to be the same as the base/normal size (as per the design)
+  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-base, $btn-border-radius-large);
+}
+
+
+// custom button size (not defualt size-variation)
+.btn-md {
+  // font-size had to be modfied to be the same as the base/normal size (as per the design)
+  @include button-size($padding-md-vertical, $padding-md-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+}
+
+
+.btn-sm {
+  // font-size had to be modfied to be the same as the base/normal size (as per the design)
+  @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+}
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+
+//# Button Highlight (Lavendar Button)
+.btn-highlight {
+  @include button-variant($btn-highlight-color, $btn-highlight-bg, $btn-highlight-border);
+}
+.btn-highlight-outline {
+  @include button-variant($btn-highlight-outline-color, $btn-highlight-outline-bg, $btn-highlight-outline-border);
+}
+
+//# Button Warning (Orange Button)
+.btn-warning {
+  @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+}
+.btn-warning-outline {
+  @include button-variant($btn-warning-outline-color, $btn-warning-outline-bg, $btn-warning-outline-border);
+}
+
+//# Button Warning (Red Button)
+.btn-danger {
+  @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+}
+.btn-danger-outline {
+  @include button-variant($btn-danger-outline-color, $btn-danger-outline-bg, $btn-danger-outline-border);
+}
+
+//# Button Success (Green Button)
+.btn-success {
+  @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+}
+.btn-success-outline {
+  @include button-variant($btn-success-outline-color, $btn-success-outline-bg, $btn-success-outline-border);
+}
+
+
+//# Button Focus (Dark Gray Button)
+.btn-focus {
+  @include button-variant($btn-focus-color, $btn-focus-bg, $btn-focus-border);
+}
+.btn-focus-outline {
+  @include button-variant($btn-focus-outline-color, $btn-focus-outline-bg, $btn-focus-outline-border);
+}
+
+
+//# Button Quiet (Very light gray Button)
+.btn-quiet {
+  @include button-variant($btn-quiet-color, $btn-quiet-bg, $btn-quiet-border);
+}
+.btn-quiet-outline {
+  @include button-variant($btn-quiet-outline-color, $btn-quiet-outline-bg, $btn-quiet-outline-border);
+}
+
+.btn-white {
+  @include button-variant($btn-white-color, $btn-white-bg, $btn-white-border);
+}
+.btn-white-outline {
+  @include button-variant($btn-white-outline-color, $btn-white-outline-bg, $btn-white-outline-border);
+}
+
+
+
+
+
+
+.btn-white-clear {
+  @include button-variant($btn-white-clear-color, $btn-white-clear-bg, $btn-white-clear-border);
+}
+
+
+
+.btn-lite {
+  @include button-variant($btn-lite-color, $btn-lite-bg, $btn-lite-border);
+}
+
+

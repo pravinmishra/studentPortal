@@ -1,0 +1,22 @@
+<a  [routerLink]="['/app/addStudent']" class="addNew">Add New Student</a>     
+
+<h1 class="heading">Student Dashboard</h1>
+<ul class="list-group">
+  <li *ngFor="let item of studentList; let i=index" class="clearfix">
+    <div class="srno">{{ item.id }}</div>
+    <div class="name">{{ item.Name }}</div>
+    <div class="age">{{ item.Age }}</div>
+    <div class="school">{{ item.school }}</div>
+    <div class="standard">{{ item.class }}</div>
+    <div class="division">{{ item.DIVISION }}</div>
+    <div class="status">{{ item.studentStatus }}</div>
+    <div class="links"><a>Edit</a><a (click)="deleteStudent(item.id)">Delete</a></div>
+  </li>
+  <li *ngIf="studentList.length === 0">No Students to show</li>
+</ul>
+
+<div class="pagination">
+  <a (click)="getStudentList(0)">&laquo;</a>
+  <a *ngFor="let i of countArray;" (click)="getStudentList(i)">{{i}}</a>
+  <a  (click)="getStudentList(pageCount)">&raquo;</a>
+</div>

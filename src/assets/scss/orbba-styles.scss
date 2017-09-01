@@ -1,0 +1,20 @@
+
+@import "bootstrap/variables-custom";
+@import "bootstrap";
+@import "bootstrap/mixins";
+
+
+//any other redefined / customized bS component styles (buttons, nav, tables etc. come here.
+@import "bootstrap/mixins/customized/forms-cust";
+@import "bootstrap/customized/buttons-cust";
+@import "bootstrap/customized/forms-cust";
+@import "bootstrap/customized/tables-cust";
+@import "bootstrap/customized/panels-cust";
+
+
+// and FINALLY custom styles (used for layouting)
+@import "custom-styles";
+@import "template-styles";
+
+
+

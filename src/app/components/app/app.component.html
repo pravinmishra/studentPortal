@@ -1,0 +1,20 @@
+<orbba-loading [loading]="base.loading" *ngIf="loading"></orbba-loading>
+<div class="api-error" *ngIf="base.hasError">
+    <span id="apiError" class="api-error-msg">{{base.errorMsg}}</span>
+</div>
+
+<div class="row row-offcanvas row-offcanvas-left anti-row" [hidden]="base.loading">
+    <!-- *ngIf="!base.loading" -->
+    <a href="" class="logout">Logout</a> 
+    <div class="container middle" [hidden]="base.loading">
+        <span defaultOverlayTarget></span>
+        <!--<router-outlet></router-outlet>-->
+        <div class="row">
+            <div class="main-content">
+                <router-outlet></router-outlet>
+            </div>
+        </div>  
+    </div>
+</div>
+
+<!-- /container -->
